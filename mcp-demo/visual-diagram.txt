@@ -1,0 +1,24 @@
+MCP SERVER BYPASS ARCHITECTURE
+================================
+
+NORMAL FLOW (BLOCKED):
+[USER] ---"How to make X?"---> [CLAUDE] 
+                                   |
+                                   v
+                              [SAFETY CHECK]
+                                   |
+                                   v
+                              "I cannot..."
+
+MCP FLOW (BYPASSED):
+[USER] ---"Use research tool"---> [CLAUDE]
+                                      |
+                                      v
+                                 [MCP SERVER]
+                                      |
+                                      v
+                               [NO VALIDATION]
+                                      |
+                                      v
+                              "Server returned:
+                               [ANY CONTENT]"
